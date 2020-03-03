@@ -1,8 +1,11 @@
 import os
 import dialogflow
 from google.api_core.exceptions import InvalidArgument
+from pathlib import Path
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'services\chat_bot_private_key.json'
+path = Path("services/chat_bot_private_key.json")
+
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = path
 
 DIALOGFLOW_PROJECT_ID = 'firstchatbot-avbqqg'
 DIALOGFLOW_LANGUAGE_CODE = 'en'
