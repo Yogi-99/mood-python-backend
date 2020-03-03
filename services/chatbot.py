@@ -2,7 +2,7 @@ import os
 import dialogflow
 from google.api_core.exceptions import InvalidArgument
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '.\services\chat_bot_private_key.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'services\chat_bot_private_key.json'
 
 DIALOGFLOW_PROJECT_ID = 'firstchatbot-avbqqg'
 DIALOGFLOW_LANGUAGE_CODE = 'en'
