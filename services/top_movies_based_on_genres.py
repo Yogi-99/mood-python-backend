@@ -5,6 +5,9 @@ from joblib import load
 top_n_popular_movies_model = load('movie_recommendation_models/top_n_popular_movies.joblib')
 top_genres = load('movie_recommendation_models/best_movies_filtered_genres.joblib')
 
+top_genres.drop_duplicates(subset='imdb_id', keep=False, inplace=True)
+top_n_popular_movies_model.drop_duplicates(subset='imdb_id', keep=False, inplace=True)
+
 top_genres_return_fields = ['imdb_id', 'original_title', 'overview', 'tagline']
 top_popular_return_fields = ['imdb_id', 'original_title', 'overview', 'tagline']
 
